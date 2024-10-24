@@ -1,4 +1,4 @@
-# mwg.blazor.components.bs5
+# maatwerkgiethoorn.blazor.components.bs5
 
 A Blazor library consisting of Bootstrap 5 Blazor components. This is a work in progress, and it currently includes a `TabSet` and a `PageHeader` component.
 
@@ -7,7 +7,7 @@ A Blazor library consisting of Bootstrap 5 Blazor components. This is a work in 
 To start using the library in your Blazor project, install the package from NuGet:
 
 ```bash
-dotnet add package mwg.blazor.components.bs5
+dotnet add package maatwerkgiethoorn.blazor.components.bs5
 ```
 
 ## Usage
@@ -15,7 +15,7 @@ dotnet add package mwg.blazor.components.bs5
 After installing the package, reference the library's stylesheet in your `index.html` or `app.razor` file:
 
 ```html
-<link rel="stylesheet" href="_content/mwg.blazor.components.bs5/css/styles.css" />
+<link rel="stylesheet" href="_content/maatwerkgiethoorn.blazor.components.bs5/css/styles.css" />
 ```
 
 ## Components
@@ -25,14 +25,14 @@ After installing the package, reference the library's stylesheet in your `index.
 The `TabSet` component allows you to create a tabbed interface. Here's an example of how to use it:
 
 ```razor
-<mwg.blazor.components.bs5.TabSet>
-    <mwg.blazor.components.bs5.Tab Title="tab1">
+<maatwerkgiethoorn.blazor.components.bs5.TabSet>
+    <maatwerkgiethoorn.blazor.components.bs5.Tab Title="tab1">
         <h1>Tab 1</h1>
-    </mwg.blazor.components.bs5.Tab>
-    <mwg.blazor.components.bs5.Tab Title="tab2">
+    </maatwerkgiethoorn.blazor.components.bs5.Tab>
+    <maatwerkgiethoorn.blazor.components.bs5.Tab Title="tab2">
         <h1>Tab 2</h1>
-    </mwg.blazor.components.bs5.Tab>
-</mwg.blazor.components.bs5.TabSet>
+    </maatwerkgiethoorn.blazor.components.bs5.Tab>
+</maatwerkgiethoorn.blazor.components.bs5.TabSet>
 ```
 
 ### PageHeader
@@ -40,9 +40,9 @@ The `TabSet` component allows you to create a tabbed interface. Here's an exampl
 The `PageHeader` component is designed for displaying page titles and additional actions or links. Here's how to use it:
 
 ```razor
-<mwg.blazor.components.bs5.PageHeader Title="Bedrijven">
+<maatwerkgiethoorn.blazor.components.bs5.PageHeader Title="Bedrijven">
     <a href="bedrijf/create">Create New</a>
-</mwg.blazor.components.bs5.PageHeader>
+</maatwerkgiethoorn.blazor.components.bs5.PageHeader>
 ```
 
 ## Contributing
