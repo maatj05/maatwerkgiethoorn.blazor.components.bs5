@@ -1,0 +1,31 @@
+﻿@page "/"
+@using static Microsoft.AspNetCore.Components.Web.RenderMode
+
+<h2>Tabs</h2>
+<maatwerkgiethoorn.blazor.components.bs5.TabSet>
+    <maatwerkgiethoorn.blazor.components.bs5.Tab Title="tab1">
+        <h1>Tab 1</h1>
+    </maatwerkgiethoorn.blazor.components.bs5.Tab>
+    <maatwerkgiethoorn.blazor.components.bs5.Tab Title="tab2">
+        <h1>Tab 2</h1>
+    </maatwerkgiethoorn.blazor.components.bs5.Tab>
+
+</maatwerkgiethoorn.blazor.components.bs5.TabSet>
+
+
+
+<h2>ResultBox</h2>
+<div class="btn-group">
+    <button class="btn btn-success" @onclick="@(() => result1 = CSharpFunctionalExtensions.Result.Success())">ok</button>
+    <button class="btn btn-danger" @onclick="@(() => result1 = CSharpFunctionalExtensions.Result.Failure("error from vladimir"))">error</button>
+</div>
+<div class="btn-group">
+    <button class="btn btn-success" @onclick="@(() => result2 = Ardalis.Result.Result.Success())">ok</button>
+    <button class="btn btn-danger" @onclick="@(() => result2 =  Ardalis.Result.Result.Error("Error from ardalis" ))">error</button>
+</div>
+<maatwerkgiethoorn.blazor.components.bs5.ResultBox Value="result1" />
+
+@code{
+    CSharpFunctionalExtensions.Result? result1;
+    Ardalis.Result.Result? result2;
+}

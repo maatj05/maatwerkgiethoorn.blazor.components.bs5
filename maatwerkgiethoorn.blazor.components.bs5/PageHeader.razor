@@ -1,0 +1,17 @@
+<div class="d-flex justify-content-between mb-5">
+    <h2>@Title</h2>
+    <div>
+        @if (ChildContent != null)
+        {
+            @ChildContent
+        }
+    </div>
+</div>
+<hr />
+
+
+@code {
+    [Parameter] public string? Title { get; set; }
+    [Parameter] public RenderFragment? ChildContent { get; set; }
+
+}

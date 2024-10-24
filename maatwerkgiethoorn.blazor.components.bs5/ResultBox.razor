@@ -1,0 +1,72 @@
+﻿@if (Value is not null)
+{
+    <div class="alert alert-success" role="alert">
+        @if (Value is Ardalis.Result.Result ardals)
+        {
+            @if (ardals.IsSuccess && ShowSuccess == true)
+            {
+                @SuccesMessage
+
+            }
+            else if (ardals.Errors.Any())
+            {
+
+                @if (ardals.Errors.Count() == 1)
+                {
+                    @ardals.Errors.First()
+                }
+                else
+                {
+                    <ul>
+                        @foreach (var error in ardals.Errors)
+                        {
+                            <li>@error</li>
+                        }
+                    </ul>
+                }
+
+            }
+        }
+        @if (Value is CSharpFunctionalExtensions.Result result)
+        {
+            @if (result.IsSuccess && ShowSuccess == true)
+            {
+                <div class="alert alert-success" role="alert">
+                    @SuccesMessage
+                </div>
+            }
+            else if (result.IsFailure)
+            {
+                <div class="alert alert-danger" role="alert">
+                    @result.Error
+                </div>
+            }
+        }
+    </div>
+
+}
+@code {
+    [Parameter] public Object? Value { get; set; }
+    [Parameter] public bool ShowSuccess { get; set; } = true;
+    [Parameter] public string SuccesMessage { get; set; } = "Success";
+
+
+    
+
+    public class ArdalisResultWrapper
+    {
+        public Ardalis.Result.Result Result { get; }
+
+        public ArdalisResultWrapper(Ardalis.Result.Result result)
+        {
+            Result = result;
+        }
+    }
+
+
+
+
+
+}
+
+

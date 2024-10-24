@@ -1,0 +1,40 @@
+<div class="bs5tab">
+
+    <ul class="nav nav-tabs">
+        @foreach (var tab in Pages)
+        {
+            string activeClass = (ActivePage == tab) ? " active" : "";
+            <li class="nav-item">
+                <button onclick="@(() => setActiveTab(tab))" class="nav-link @activeClass">@tab.Title</button>
+            </li>
+        }
+    </ul>
+
+
+    <div class="tab-content">
+        <CascadingValue Value="this">
+            @ChildContent
+        </CascadingValue>
+    </div>
+</div>
+
+@code {
+    [Parameter] public RenderFragment? ChildContent { get; set; }
+
+
+    public Tab? ActivePage { get; set; }
+
+    List<Tab> Pages = new List<Tab>();
+    internal void AddPage(Tab tabPage)
+    {
+        Pages.Add(tabPage);
+        if (Pages.Count == 1)
+            ActivePage = tabPage;
+        StateHasChanged();
+    }
+    internal void setActiveTab(Tab tab)
+    {
+        ActivePage = tab;
+        StateHasChanged();
+    }
+}
