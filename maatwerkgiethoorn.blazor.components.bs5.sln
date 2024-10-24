@@ -5,7 +5,6 @@ VisualStudioVersion = 17.11.35312.102
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{07E887F8-4972-47F6-8939-F65BEF58A421}"
 	ProjectSection(SolutionItems) = preProject
-		mwg.blazor.components.bs5\azure-pipelines.yml = mwg.blazor.components.bs5\azure-pipelines.yml
 		README.md = README.md
 	EndProjectSection
 EndProject

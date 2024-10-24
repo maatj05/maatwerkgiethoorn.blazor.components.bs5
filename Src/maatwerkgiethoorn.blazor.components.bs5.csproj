@@ -6,13 +6,14 @@
     <ImplicitUsings>enable</ImplicitUsings>
     <AddRazorSupportForMvc>true</AddRazorSupportForMvc>
     <OutputType>Library</OutputType>
-    <Title>Bootstrap 5 components</Title>
+    <Title>Bootstrap 5 Components</Title>
 	  <AssemblyVersion>1.0.0</AssemblyVersion>
 	  <FileVersion>1.0.0</FileVersion>
 	  <IsPackable>true</IsPackable>
 	  <Description>Simple bootstrap 5 packages</Description>
 	  <PackageReadmeFile>README.md</PackageReadmeFile>
-	  <PackageProjectUrl>https://dev.azure.com/maatwerkgiethoorn/Packages/_git/mwg.blazor.components.bs5</PackageProjectUrl>
+	  <PackageProjectUrl>https://github.com/maatj05/maatwerkgiethoorn.blazor.components.bs5</PackageProjectUrl>
+	  <PackageLicenseFile>LICENSE.txt</PackageLicenseFile>
   </PropertyGroup>
 
   <ItemGroup>
@@ -20,6 +21,10 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Include="..\LICENSE.txt">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
     <None Include="..\README.md">
       <Pack>True</Pack>
       <PackagePath>\</PackagePath>
@@ -30,13 +35,6 @@
     <PackageReference Include="Ardalis.Result" Version="10.0.0" />
     <PackageReference Include="CSharpFunctionalExtensions" Version="3.1.0" />
   </ItemGroup>
-
-	<ItemGroup>
-		<Content Update="wwwroot\css\styles.css">
-			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-			<CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-		</Content>
-	</ItemGroup>
 
 
 </Project>
